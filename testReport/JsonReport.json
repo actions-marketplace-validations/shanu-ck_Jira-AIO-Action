@@ -1,0 +1,220 @@
+[
+    {
+        "line": 2,
+        "elements": [
+            {
+                "start_timestamp": "2022-11-27T03:31:04.227Z",
+                "before": [
+                    {
+                        "result": {
+                            "duration": 3152731000,
+                            "status": "passed"
+                        },
+                        "match": {
+                            "location": "StepDefinitions.LoginSteps.before()"
+                        }
+                    }
+                ],
+                "line": 5,
+                "name": "New Test Scenario",
+                "description": "",
+                "id": "test-login-feature;new-test-scenario",
+                "after": [
+                    {
+                        "result": {
+                            "duration": 107663000,
+                            "status": "passed"
+                        },
+                        "match": {
+                            "location": "StepDefinitions.LoginSteps.after()"
+                        }
+                    }
+                ],
+                "type": "scenario",
+                "keyword": "Scenario",
+                "steps": [
+                    {
+                        "result": {
+                            "duration": 1437669000,
+                            "status": "passed"
+                        },
+                        "line": 6,
+                        "name": "I am on the login page",
+                        "match": {
+                            "location": "StepDefinitions.LoginSteps.i_am_on_the_login_page()"
+                        },
+                        "keyword": "Given "
+                    },
+                    {
+                        "result": {
+                            "duration": 193890000,
+                            "status": "passed"
+                        },
+                        "line": 7,
+                        "name": "I enter email \"test@test.com\" and password \"testpassword\"",
+                        "match": {
+                            "arguments": [
+                                {
+                                    "val": "test@test.com",
+                                    "offset": 15
+                                },
+                                {
+                                    "val": "testpassword",
+                                    "offset": 44
+                                }
+                            ],
+                            "location": "StepDefinitions.LoginSteps.i_enter_email_and_password(java.lang.String,java.lang.String)"
+                        },
+                        "keyword": "When "
+                    },
+                    {
+                        "result": {
+                            "duration": 38481000,
+                            "status": "passed"
+                        },
+                        "line": 8,
+                        "name": "I click on login button",
+                        "match": {
+                            "location": "StepDefinitions.LoginSteps.i_click_on_login_button()"
+                        },
+                        "keyword": "And "
+                    },
+                    {
+                        "result": {
+                            "duration": 11772484000,
+                            "status": "passed"
+                        },
+                        "line": 9,
+                        "name": "I verify dashbord page is opened",
+                        "match": {
+                            "location": "StepDefinitions.LoginSteps.i_verify_dashbord_page_is_opened()"
+                        },
+                        "keyword": "Then "
+                    }
+                ],
+                "tags": [
+                    {
+                        "name": "@FIR-68"
+                    },
+                    {
+                        "name": "@FIR-TC-1"
+                    }
+                ]
+            },
+            {
+                "start_timestamp": "2022-11-27T03:31:20.947Z",
+                "before": [
+                    {
+                        "result": {
+                            "duration": 943147000,
+                            "status": "passed"
+                        },
+                        "match": {
+                            "location": "StepDefinitions.LoginSteps.before()"
+                        }
+                    }
+                ],
+                "line": 12,
+                "name": "Verify logic with credentials",
+                "description": "",
+                "id": "test-login-feature;verify-logic-with-credentials",
+                "after": [
+                    {
+                        "result": {
+                            "duration": 108215000,
+                            "status": "passed"
+                        },
+                        "match": {
+                            "location": "StepDefinitions.LoginSteps.after()"
+                        }
+                    }
+                ],
+                "type": "scenario",
+                "keyword": "Scenario",
+                "steps": [
+                    {
+                        "result": {
+                            "duration": 383366000,
+                            "status": "passed"
+                        },
+                        "line": 13,
+                        "name": "I am on the login page",
+                        "match": {
+                            "location": "StepDefinitions.LoginSteps.i_am_on_the_login_page()"
+                        },
+                        "keyword": "Given "
+                    },
+                    {
+                        "result": {
+                            "duration": 95775000,
+                            "status": "passed"
+                        },
+                        "line": 14,
+                        "name": "I enter email \"test@test.com\" and password \"testpassword\"",
+                        "match": {
+                            "arguments": [
+                                {
+                                    "val": "test@test.com",
+                                    "offset": 15
+                                },
+                                {
+                                    "val": "testpassword",
+                                    "offset": 44
+                                }
+                            ],
+                            "location": "StepDefinitions.LoginSteps.i_enter_email_and_password(java.lang.String,java.lang.String)"
+                        },
+                        "keyword": "When "
+                    },
+                    {
+                        "result": {
+                            "duration": 29571000,
+                            "status": "passed"
+                        },
+                        "line": 15,
+                        "name": "I click on login button",
+                        "match": {
+                            "location": "StepDefinitions.LoginSteps.i_click_on_login_button()"
+                        },
+                        "keyword": "And "
+                    },
+                    {
+                        "result": {
+                            "duration": 3202614000,
+                            "status": "passed"
+                        },
+                        "line": 16,
+                        "name": "I verify dashbord page is opened",
+                        "match": {
+                            "location": "StepDefinitions.LoginSteps.i_verify_dashbord_page_is_opened()"
+                        },
+                        "keyword": "Then "
+                    }
+                ],
+                "tags": [
+                    {
+                        "name": "@FIR-68"
+                    },
+                    {
+                        "name": "@FIR-TC-2"
+                    }
+                ]
+            }
+        ],
+        "name": "Test login feature",
+        "description": "",
+        "id": "test-login-feature",
+        "keyword": "Feature",
+        "uri": "file:src/test/resources/Features/login.feature",
+        "tags": [
+            {
+                "name": "@FIR-68",
+                "type": "Tag",
+                "location": {
+                    "line": 1,
+                    "column": 1
+                }
+            }
+        ]
+    }
+]
