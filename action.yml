@@ -50,9 +50,9 @@ runs:
     - run: echo $INPUT_FILE
       shell: bash
 
-    - run echo ${{ inputs.filePath }}
+    - run: echo ${{ inputs.filePath }}
       shell: bash
-      
+
     - run: curl -H "accept:application/json" \
         -H "Authorization:AioAuth $INPUT_TOKEN" \
         -H "Content-Type:multipart/form-data" 
