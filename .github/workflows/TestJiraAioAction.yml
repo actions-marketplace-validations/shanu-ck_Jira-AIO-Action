@@ -1,6 +1,11 @@
 name: Test AIO Jira Action 
 
-on: release
+on:
+  release:
+    types: [published]
+  push:
+    branches:
+      - 'main'
 
 jobs:
   build:
