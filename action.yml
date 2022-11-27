@@ -47,13 +47,6 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: curl -H "accept:application/json" \
-        -H "Authorization:AioAuth ${{ inputs.token }}" \
-        -H "Content-Type:multipart/form-data" 
-        -F "createNewRun=${{ inputs.createNewRun }}" \
-        -F "addCaseToCycle=${{ inputs.addCaseToCycle }}" \
-        -F "createCase=${{ inputs.createCase }}" \
-        -F "bddForceUpdateCase=${{ inputs.bddForceUpdateCase }}" \
-        -F "file=@${{ inputs.filePath }};type=application/${{ inputs.fileType }}" \
-        -X POST "https://tcms.aiojiraapps.com/aio-tcms/api/v1/project/${{ inputs.jiraProjectKey }}/testcycle/${{ inputs.aioCycleKey }}/import/results?type=${{ inputs.reportType }}"
+    - run: |
+        curl -H "accept:application/json" -H "Authorization:AioAuth ${{ inputs.token }}" -H "Content-Type:multipart/form-data" -F "createNewRun=${{ inputs.createNewRun }}" -F "addCaseToCycle=${{ inputs.addCaseToCycle }}" -F "createCase=${{ inputs.createCase }}" -F "bddForceUpdateCase=${{ inputs.bddForceUpdateCase }}" -F "file=@${{ inputs.filePath }};type=application/${{ inputs.fileType }}" -X POST "https://tcms.aiojiraapps.com/aio-tcms/api/v1/project/${{ inputs.jiraProjectKey }}/testcycle/${{ inputs.aioCycleKey }}/import/results?type=${{ inputs.reportType }}"
       shell: bash
