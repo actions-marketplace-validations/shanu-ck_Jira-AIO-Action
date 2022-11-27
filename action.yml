@@ -1,0 +1,59 @@
+name: 'Jira AIO Tests with Github Action'
+author: 'ShanuDey'
+description: 'This action will automate the process of updating the test results from Github Actions to Jira AIO Tests'
+
+branding:
+  color: 'blue'
+  icon: 'check-squre'
+
+inputs:
+  token:
+    description: 'AIO API Token is required to interact with AIO Tests'
+    required: true
+  createNewRun:
+    description: 'Creates a new run for each case'
+    required: false
+    default: true
+  addCaseToCycle:
+    description: 'If case is not already existing in the cycle, then the case is added to the cycle.  False will mark such  a case in failures'
+    required: false
+    default: true
+  createCase:
+    description: 'If a key or automation key is not found in the tags, then a new case will be created if set to true.'
+    required: false
+    default: true
+  bddForceUpdateCase:
+    description: 'If the automation results file has different steps then the mapped case in AIO Tests, then they would be overwritten with the one from the results file if the value is set to true'
+    required: false
+    default: true
+  filePath:
+    description: 'File path of the test report'
+    required: true
+  fileType:
+    description: 'File type of the test report'
+    required: false
+    default: 'json'
+  jiraProjectKey:
+    description: 'Mention the Jira Project Key'
+    required: true
+  aioCycleKey:
+    description: 'AIO test cycle key'
+    required: true
+  reportType:
+    description: 'Test result type E.g. Cucumber'
+    required: false
+    default: 'Cucumber'
+  
+runs:
+  using: 'composite'
+  steps:
+    - run: curl -H "accept:application/json" \
+        -H "Authorization:AioAuth $INPUT_TOKEN" \
+        -H "Content-Type:multipart/form-data" 
+        -F "createNewRun=$INPUT_CREATENEWRUN" \
+        -F "addCaseToCycle=$INPUT_ADDCASETOCYCLE" \
+        -F "createCase=$INPUT_CREATECASE" \
+        -F "bddForceUpdateCase=$INPUT_BDDFORCEUPDATECASE" \
+        -F "file=@$INPUT_FILE;type=application/$FILETYPE" \
+        -X POST "https://tcms.aiojiraapps.com/aio-tcms/api/v1/project/$INPUT_JIRAPROJECTKEY/testcycle/$INPUT_AIOCYCLEKEY/import/results?type=$INPUT_REPORTTYPE"
+      shell: bash
