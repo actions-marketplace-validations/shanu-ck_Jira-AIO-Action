@@ -4,7 +4,7 @@ description: 'This action will automate the process of updating the test results
 
 branding:
   color: 'blue'
-  icon: 'check-squre'
+  icon: 'check-square'
 
 inputs:
   token:
