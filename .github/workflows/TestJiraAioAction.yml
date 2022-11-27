@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Jira AIO Tests with Github Action
-        uses: ShanuDey/Jira-AIO-Action@v1.0.1
+        uses: ShanuDey/Jira-AIO-Action@v1.0.2
         with:
           token: ${{ secrets.AIO_API_TOKEN }}
           filePath: "testReport/JsonReport.json"
