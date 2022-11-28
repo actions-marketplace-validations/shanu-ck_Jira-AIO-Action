@@ -16,7 +16,7 @@
 | token | AIO API Token is required to interact with AIO Tests | Yes | |
 | createNewRun | Creates a new run for each case | No | true |
 | addCaseToCycle | If case is not already existing in the cycle, then the case is added to the cycle.  False will mark such  a case in failures | No | true |
-| createCase | f a key or automation key is not found in the tags, then a new case will be created if set to true. | No | true |
+| createCase | If a key or automation key is not found in the tags, then a new case will be created if set to true. | No | true |
 | bddForceUpdateCase | If the automation results file has different steps then the mapped case in AIO Tests, then they would be overwritten with the one from the results file if the value is set to true | No | true |
 | filePath | File path of the test report | Yes | |
 | fileType | File type of the test report | No | json |
