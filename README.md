@@ -1,10 +1,8 @@
 # Jira AIO Action
-
-[![Test AIO Jira Action](https://github.com/ShanuDey/Jira-AIO-Action/actions/workflows/TestJiraAioAction.yml/badge.svg)](https://github.com/ShanuDey/Jira-AIO-Action/actions/workflows/TestJiraAioAction.yml)
-
+[![Test AIO Jira Action](https://github.com/shanu-ck/Jira-AIO-Action/actions/workflows/TestJiraAioAction.yml/badge.svg)](https://github.com/shanu-ck/Jira-AIO-Action/actions/workflows/TestJiraAioAction.yml)
 ## Usage
     - name: Jira AIO Tests with Github Action
-      uses: ShanuDey/Jira-AIO-Action@v2
+      uses: shanu-ck/Jira-AIO-Action@v1
       with:
         token: ${{ secrets.AIO_API_TOKEN }}
         filePath: "testReport/JsonReport.json"
@@ -25,6 +23,4 @@
 | reportType | Test result type E.g. Cucumber | No | Cucumber |
 
 ## Developed By
-* [ShanuDey](https://github.com/ShanuDey)
-* [paypal.me/ShanuDey](Paypal.me/ShanuDey)
-
+* [ShanuDey](https://github.com/shanu-ck)

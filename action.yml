@@ -1,5 +1,5 @@
-name: 'Jira AIO Tests with Github Action'
-author: 'ShanuDey'
+name: 'AIO Tests Jira App integration with Github Action'
+author: 'shanu-ck'
 description: 'This action will automate the process of updating the test results from Github Actions to Jira AIO Tests'
 
 branding:
